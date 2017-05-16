@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: CompositeSampleApplication
+  cloud:
+    vault:
+      host: localhost
+      port: 8200
+      token: dev-token
+      scheme: http
+    config:
+      server:
+        git:
+          uri: file:./git-config-repo/
+          order: 2
+        vault:
+          order: 1
+        bootstrap: true
+server:
+  port: 9106

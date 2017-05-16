@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: ZookeeperSampleApplication
+  cloud:
+    zookeeper:
+      max-retries: 0
+      max-sleep-ms: 0
+      connect-string: localhost:2181
+      block-until-connected-wait: 0
+      config:
+        failFast: false
+server:
+  port: 9106

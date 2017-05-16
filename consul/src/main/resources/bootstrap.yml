@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: ConsulSampleApplication
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      config:
+        fail-fast: true
+server:
+  port: 9101

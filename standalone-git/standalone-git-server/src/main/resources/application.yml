@@ -1,0 +1,15 @@
+spring:
+  profiles:
+    active: native
+  application:
+    name: StandaloneGitServerApplication
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:apps-configuration/
+server:
+  port: 9104
+management:
+  security:
+    enabled: false

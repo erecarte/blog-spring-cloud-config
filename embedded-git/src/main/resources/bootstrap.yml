@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: EmbeddedGitSampleApplication
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/erecarte/blog-spring-cloud-config-configuration.git
+        bootstrap: true
+server:
+  port: 9102

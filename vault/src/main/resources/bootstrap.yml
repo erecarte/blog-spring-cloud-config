@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: VaultSampleApplication
+  cloud:
+    vault:
+      host: localhost
+      port: 8200
+      token: dev-token
+      scheme: http
+server:
+  port: 9105
