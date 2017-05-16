@@ -37,21 +37,6 @@ services:
       - "8500:8500"
       - "8600:8600/udp"
 
-#  kafka:
-#    image: wurstmeister/kafka:0.8.2.0
-#    container_name: kafka
-#    hostname: kafka
-#    depends_on:
-#      - zookeeper
-#    links:
-#      - zookeeper:zookeeper
-#    environment:
-#      KAFKA_ADVERTISED_HOST_NAME: "kafka"
-#      KAFKA_ADVERTISED_PORT: 9092
-#      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-#    ports:
-#      - "9092:9092"
-
   rabbitmq:
     image: rabbitmq:3-management
     container_name: rabbitmq
