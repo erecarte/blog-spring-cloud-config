@@ -1,0 +1,16 @@
+@startuml
+skinparam monochrome true
+
+rectangle Application
+rectangle ConfigServer as "Config Server"
+rectangle Git as "GIT Repository"
+rectangle RabbitMQ
+rectangle Application
+
+[Application] --> [ConfigServer]: Pull Configuration
+[ConfigServer] -l-> [Git]: git pull
+[ConfigServer] -r-> [RabbitMQ]: Remote Refresh event
+[RabbitMQ] --> [Application]: Remote Refresh event
+[Git] --> [ConfigServer]:Webhook /monitor
+
+@enduml
