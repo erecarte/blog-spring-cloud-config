@@ -2,6 +2,7 @@ package com.erecarte.common.controller;
 
 import com.erecarte.common.model.SampleAnnotatedProperties;
 import com.erecarte.common.model.SampleConfigurationProperties;
+import com.erecarte.common.model.SampleEnvironmentProperties;
 import com.erecarte.common.model.SampleRefreshedAnnotatedProperties;
 import com.erecarte.common.service.SampleService;
 import lombok.Value;
@@ -34,6 +35,12 @@ public class SampleController {
    @GetMapping("/refreshed-annotated-properties")
    public PropertiesDTO sampleAnnotatedPropertiesWithRefresh() {
       SampleRefreshedAnnotatedProperties properties = sampleService.getRefreshedAnnotatedProperties();
+      return new PropertiesDTO(properties.getFirstProperty(), properties.getSecondProperty());
+   }
+
+   @GetMapping("/environment-properties")
+   public PropertiesDTO sampleEnvironmentProperties() {
+      SampleEnvironmentProperties properties = sampleService.getEnvironmentProperties();
       return new PropertiesDTO(properties.getFirstProperty(), properties.getSecondProperty());
    }
 
