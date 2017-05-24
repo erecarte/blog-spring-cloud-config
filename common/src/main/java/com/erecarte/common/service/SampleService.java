@@ -1,9 +1,9 @@
 package com.erecarte.common.service;
 
-import com.erecarte.common.model.SampleAnnotatedProperties;
-import com.erecarte.common.model.SampleConfigurationProperties;
-import com.erecarte.common.model.SampleEnvironmentProperties;
-import com.erecarte.common.model.SampleRefreshedAnnotatedProperties;
+import com.erecarte.common.model.AnnotatedProperties;
+import com.erecarte.common.model.ConfigProperties;
+import com.erecarte.common.model.EnvironmentProperties;
+import com.erecarte.common.model.RefreshScopeAnnotatedProperties;
 import org.springframework.stereotype.Service;
 
 /**
@@ -11,35 +11,35 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class SampleService {
-   private SampleConfigurationProperties sampleConfigurationProperties;
-   private SampleAnnotatedProperties sampleAnnotatedProperties;
-   private SampleRefreshedAnnotatedProperties sampleRefreshedAnnotatedProperties;
-   private SampleEnvironmentProperties sampleEnvironmentProperties;
+   private ConfigProperties configProperties;
+   private AnnotatedProperties annotatedProperties;
+   private RefreshScopeAnnotatedProperties refreshScopeAnnotatedProperties;
+   private EnvironmentProperties environmentProperties;
 
-   public SampleService(SampleConfigurationProperties sampleConfigurationProperties,
-                        SampleAnnotatedProperties sampleAnnotatedProperties,
-                        SampleRefreshedAnnotatedProperties sampleRefreshedAnnotatedProperties,
-                        SampleEnvironmentProperties sampleEnvironmentProperties) {
-      this.sampleConfigurationProperties = sampleConfigurationProperties;
-      this.sampleAnnotatedProperties = sampleAnnotatedProperties;
-      this.sampleRefreshedAnnotatedProperties = sampleRefreshedAnnotatedProperties;
-      this.sampleEnvironmentProperties = sampleEnvironmentProperties;
+   public SampleService(ConfigProperties configProperties,
+                        AnnotatedProperties annotatedProperties,
+                        RefreshScopeAnnotatedProperties refreshScopeAnnotatedProperties,
+                        EnvironmentProperties environmentProperties) {
+      this.configProperties = configProperties;
+      this.annotatedProperties = annotatedProperties;
+      this.refreshScopeAnnotatedProperties = refreshScopeAnnotatedProperties;
+      this.environmentProperties = environmentProperties;
    }
 
-   public SampleConfigurationProperties getConfigurationProperties() {
-      return sampleConfigurationProperties;
+   public ConfigProperties getConfigurationProperties() {
+      return configProperties;
    }
 
-   public SampleAnnotatedProperties getAnnotatedProperties() {
-      return sampleAnnotatedProperties;
+   public AnnotatedProperties getAnnotatedProperties() {
+      return annotatedProperties;
    }
 
-   public SampleRefreshedAnnotatedProperties getRefreshedAnnotatedProperties() {
-      return sampleRefreshedAnnotatedProperties;
+   public RefreshScopeAnnotatedProperties getRefreshedAnnotatedProperties() {
+      return refreshScopeAnnotatedProperties;
    }
 
-   public SampleEnvironmentProperties getEnvironmentProperties() {
-      return sampleEnvironmentProperties;
+   public EnvironmentProperties getEnvironmentProperties() {
+      return environmentProperties;
    }
 
 }

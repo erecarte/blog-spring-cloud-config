@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @AllArgsConstructor
-public class SampleEnvironmentProperties {
+public class EnvironmentProperties {
    private Environment environment;
 
    public String getFirstProperty() {

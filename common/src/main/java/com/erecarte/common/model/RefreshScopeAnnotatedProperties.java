@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @RefreshScope
 @Component
 @Data
-public class SampleRefreshedAnnotatedProperties {
+public class RefreshScopeAnnotatedProperties {
    @Value("${sample.firstProperty:}")
    private String firstProperty;
    @Value("${sample.secondProperty:}")

@@ -1,17 +1,16 @@
 package com.erecarte.common.model;
 
 import lombok.Data;
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 /**
  * Created by llorene on 10/05/2017.
  */
 @Component
+@ConfigurationProperties(prefix = "sample")
 @Data
-public class SampleAnnotatedProperties {
-   @Value("${sample.firstProperty:}")
+public class ConfigProperties {
    private String firstProperty;
-   @Value("${sample.secondProperty:}")
    private String secondProperty;
 }

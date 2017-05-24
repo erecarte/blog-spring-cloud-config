@@ -1,9 +1,9 @@
 package com.erecarte.common.controller;
 
-import com.erecarte.common.model.SampleAnnotatedProperties;
-import com.erecarte.common.model.SampleConfigurationProperties;
-import com.erecarte.common.model.SampleEnvironmentProperties;
-import com.erecarte.common.model.SampleRefreshedAnnotatedProperties;
+import com.erecarte.common.model.AnnotatedProperties;
+import com.erecarte.common.model.ConfigProperties;
+import com.erecarte.common.model.EnvironmentProperties;
+import com.erecarte.common.model.RefreshScopeAnnotatedProperties;
 import com.erecarte.common.service.SampleService;
 import lombok.Value;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,25 +22,25 @@ public class SampleController {
 
    @GetMapping("/configuration-properties")
    public PropertiesDTO sampleConfigurationProperties() {
-      SampleConfigurationProperties properties = sampleService.getConfigurationProperties();
+      ConfigProperties properties = sampleService.getConfigurationProperties();
       return new PropertiesDTO(properties.getFirstProperty(), properties.getSecondProperty());
    }
 
    @GetMapping("/annotated-properties")
    public PropertiesDTO sampleAnnotatedProperties() {
-      SampleAnnotatedProperties properties = sampleService.getAnnotatedProperties();
+      AnnotatedProperties properties = sampleService.getAnnotatedProperties();
       return new PropertiesDTO(properties.getFirstProperty(), properties.getSecondProperty());
    }
 
    @GetMapping("/refreshed-annotated-properties")
    public PropertiesDTO sampleAnnotatedPropertiesWithRefresh() {
-      SampleRefreshedAnnotatedProperties properties = sampleService.getRefreshedAnnotatedProperties();
+      RefreshScopeAnnotatedProperties properties = sampleService.getRefreshedAnnotatedProperties();
       return new PropertiesDTO(properties.getFirstProperty(), properties.getSecondProperty());
    }
 
    @GetMapping("/environment-properties")
    public PropertiesDTO sampleEnvironmentProperties() {
-      SampleEnvironmentProperties properties = sampleService.getEnvironmentProperties();
+      EnvironmentProperties properties = sampleService.getEnvironmentProperties();
       return new PropertiesDTO(properties.getFirstProperty(), properties.getSecondProperty());
    }
 
