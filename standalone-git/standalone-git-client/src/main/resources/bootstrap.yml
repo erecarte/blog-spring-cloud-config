@@ -1,8 +1,0 @@
-spring:
-  application:
-    name: StandaloneGitClientApplication
-  cloud:
-    config:
-      uri: http://localhost:9104
-server:
-  port: 9103

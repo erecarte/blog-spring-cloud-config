@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: StandaloneGitSecondClient
+  cloud:
+    config:
+      uri: http://localhost:8888

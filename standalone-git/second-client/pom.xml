@@ -3,18 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
    <parent>
-      <artifactId>blog-spring-cloud-config</artifactId>
+      <artifactId>standalone-git</artifactId>
       <groupId>com.erecarte</groupId>
       <version>1.0.0-SNAPSHOT</version>
    </parent>
    <modelVersion>4.0.0</modelVersion>
 
-   <artifactId>embedded-git</artifactId>
-   <packaging>pom</packaging>
-   <modules>
-      <module>first-client</module>
-      <module>second-client</module>
-   </modules>
+   <artifactId>standalone-git-second-client</artifactId>
 
    <dependencies>
       <dependency>
@@ -23,7 +18,7 @@
       </dependency>
       <dependency>
          <groupId>org.springframework.cloud</groupId>
-         <artifactId>spring-cloud-config-server</artifactId>
+         <artifactId>spring-cloud-starter-config</artifactId>
       </dependency>
    </dependencies>
 

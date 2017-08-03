@@ -1,13 +1,9 @@
 spring:
   application:
-    name: StandaloneGitServerApplication
+    name: EmbeddedGitSecondClient
   cloud:
     config:
       server:
         git:
           uri: https://github.com/erecarte/blog-spring-cloud-config-configuration.git
-server:
-  port: 8888
-management:
-  security:
-    enabled: false
+        bootstrap: true

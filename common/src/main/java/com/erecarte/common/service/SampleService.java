@@ -6,9 +6,6 @@ import com.erecarte.common.model.EnvironmentProperties;
 import com.erecarte.common.model.RefreshScopeAnnotatedProperties;
 import org.springframework.stereotype.Service;
 
-/**
- * Created by llorene on 10/05/2017.
- */
 @Service
 public class SampleService {
    private ConfigProperties configProperties;

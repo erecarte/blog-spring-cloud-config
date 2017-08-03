@@ -9,9 +9,6 @@ import lombok.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * Created by llorene on 10/05/2017.
- */
 @RestController
 public class SampleController {
    private SampleService sampleService;

@@ -4,9 +4,6 @@ import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
-/**
- * Created by llorene on 10/05/2017.
- */
 @Component
 @ConfigurationProperties(prefix = "sample")
 @Data
