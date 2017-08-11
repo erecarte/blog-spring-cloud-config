@@ -1,0 +1,9 @@
+version: '2'
+services:
+
+  zookeeper:
+    image: netflixoss/exhibitor:1.5.2
+    container_name: zookeeper-exhibitor
+    ports:
+      - "8400:8080"
+      - "2181:2181"
